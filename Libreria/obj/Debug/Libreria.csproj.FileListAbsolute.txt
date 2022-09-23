@@ -1,2 +1,15 @@
 C:\Users\yapbgr\documents\visual studio 2013\Projects\Libreria\Libreria\bin\Debug\Libreria.exe
 C:\Users\yapbgr\documents\visual studio 2013\Projects\Libreria\Libreria\bin\Debug\Libreria_Archivos.dll
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria\bin\Debug\Libreria.exe.config
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria\bin\Debug\Libreria.exe
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria\bin\Debug\Libreria.pdb
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria\bin\Debug\Libreria_Archivos.dll
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria\bin\Debug\Libreria_Archivos.pdb
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria\obj\Debug\Libreria.csproj.AssemblyReference.cache
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria\obj\Debug\Libreria.Form1.resources
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria\obj\Debug\Libreria.Properties.Resources.resources
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria\obj\Debug\Libreria.csproj.GenerateResource.cache
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria\obj\Debug\Libreria.csproj.CoreCompileInputs.cache
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria\obj\Debug\Libreria.csproj.CopyComplete
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria\obj\Debug\Libreria.exe
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria\obj\Debug\Libreria.pdb

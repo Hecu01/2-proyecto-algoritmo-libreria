@@ -1,0 +1,5 @@
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria_Archivos\bin\Debug\Libreria_Archivos.dll
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria_Archivos\bin\Debug\Libreria_Archivos.pdb
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria_Archivos\obj\Debug\Libreria_Archivos.csproj.CoreCompileInputs.cache
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria_Archivos\obj\Debug\Libreria_Archivos.dll
+C:\Users\Valentin\Documents\Proyectos\facultad\proyecto-2\Libreria\Libreria_Archivos\obj\Debug\Libreria_Archivos.pdb
