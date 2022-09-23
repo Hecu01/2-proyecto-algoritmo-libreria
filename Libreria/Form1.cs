@@ -13,31 +13,31 @@ namespace Libreria
 {
     public partial class Form1 : Form
     {
-        public Articulo[]  articulos;
-        public Compra[] compras;
-        public Venta[] ventas;
-        public Cliente[] clientes;
-        public Proveedor[] proveedores;
-        public Usuario[] usuarios;
+        public List<Articulo>  articulos;
+        public List<Compra> compras;
+        public List<Venta> ventas;
+        public List<Cliente> clientes;
+        public List<Proveedor> proveedores;
+        public List<Usuario> usuarios;
 
         public Form1()
         {
             InitializeComponent();
 
-            usuarios = new Usuario[2];
-            usuarios[0] = new Usuario("Luis", "luis@hotmail", 0);
-            usuarios[1] = new Usuario("Pepe", "ppee@hotmail", 1);
-            articulos = new Articulo[10];
-            articulos[0] = new Articulo(0, "Lapiz", "Lapiz Negro", 10, 50, "Sylvapen");
-            compras = new Compra[10];
+            usuarios = new List<Usuario>();
+            usuarios.Add(new Usuario("Luis", "luis@hotmail", 0));
+            usuarios.Add(new Usuario("Pepe", "ppee@hotmail", 1));
+            articulos = new List<Articulo>();
+            articulos.Add(new Articulo(0, "Lapiz", "Lapiz Negro", 10, 50, "Sylvapen"));
+            compras = new List<Compra>();
             //compras[0] = Compra()
-            ventas = new Venta[10];
-            clientes = new Cliente[10];
-            clientes[0] = new Cliente("Isft 38", "cor@isf38", 0);
-            proveedores = new Proveedor[10];
-            proveedores[0] = new Proveedor("LK", "corr@corrre", 0);
+            ventas = new List<Venta>();
+            clientes = new List<Cliente>();
+            clientes.Add(new Cliente("Isft 38", "cor@isf38", 0));
+            proveedores = new List<Proveedor>();
+            proveedores.Add(new Proveedor("LK", "corr@corrre", 0));
 
-            for (int i = 0; i < usuarios.Length; i++)
+            for (int i = 0; i < usuarios.Count; i++)
             {
                 cbUsuario.Items.Insert(i, usuarios[i].nombre);         
             }
@@ -54,29 +54,24 @@ namespace Libreria
             double precio = 0;
             is_valid_cantidad = int.TryParse(tbArticuloCantidad.Text, out cantidad);
             is_valid_precio = double.TryParse(tbPrecio.Text, out precio);
-            if (is_valid_cantidad && is_valid_precio)
+            if (is_valid_cantidad && is_valid_precio && precio > 0 && cantidad >= 0)
             {
-                art = new Articulo(0, tbArticulo.Text, tbArtDescripcion.Text, int.Parse(tbArticuloCantidad.Text), 10, tbMarca.Text);
-                for (int i = 0; i < articulos.Length; i++)
-                {
-                    if (articulos[i] == null)
-                    {
-                        articulos[i] = art;
-                        break;
-                    }
-                }
+                art = new Articulo(articulos.Count + 1,
+                    tbArticulo.Text, 
+                    tbArtDescripcion.Text, cantidad, 
+                    precio, tbMarca.Text);
+                articulos.Add(art);
                 llenar_cbo_articulos();
-                
             }
         }
 
         private void llenar_cbo_articulos()
         {
+            
             cbArticulos.Items.Clear();
-            for (int i = 0; i < articulos.Length; i++)
+            for (int i = 0; i < articulos.Count; i++)
             {
-                if (articulos[i] != null)
-                    cbArticulos.Items.Insert(i, articulos[i].nombre + "-" + articulos[i].Marca);
+                cbArticulos.Items.Insert(i, articulos[i].nombre + "-" + articulos[i].Marca);
             }
             cbArticulos.SelectedIndex = 0;
         

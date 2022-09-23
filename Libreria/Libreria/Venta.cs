@@ -11,12 +11,12 @@ namespace Libreria.Libreria
         int id;
         Usuario usuario;
         Cliente cliente;
-        Articulo[] articulos;
+        List<Articulo> articulos;
         double precio_total;
         DateTime fechaVenta;
         DateTime fechaEntrega;
 
-        public Venta(int id, Usuario user, Cliente cliente, Articulo[] artics, double precio)
+        public Venta(int id, Usuario user, Cliente cliente, List<Articulo> artics, double precio)
         {
             this.id = id;
             this.usuario = user;
