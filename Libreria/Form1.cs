@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Libreria.Libreria;
+using Libreria_Archivos;
 
 namespace Libreria
 {
@@ -20,9 +21,13 @@ namespace Libreria
         public List<Proveedor> proveedores;
         public List<Usuario> usuarios;
 
+        public ManejoArchivos archivos;
+
         public Form1()
         {
             InitializeComponent();
+            archivos = new ManejoArchivos("C:\\Articulos.txt", "C:\\Clientes.txt", "C:\\Proveedores.txt", "C:\\Compras.txt", "C:\\Ventas.txt");
+            List<string> listado = archivos.Leer_Articulos();
 
             usuarios = new List<Usuario>();
             usuarios.Add(new Usuario("Luis", "luis@hotmail", 0));
@@ -43,7 +48,12 @@ namespace Libreria
             }
             cbUsuario.SelectedIndex = 0;
 
+
+
             this.llenar_cbo_articulos();
+            this.llenar_cbo_proveedores();
+            
+
         }
 
         private void btArticulo_Click(object sender, EventArgs e)
@@ -66,15 +76,23 @@ namespace Libreria
         }
 
         private void llenar_cbo_articulos()
-        {
-            
+        {   
             cbArticulos.Items.Clear();
             for (int i = 0; i < articulos.Count; i++)
             {
                 cbArticulos.Items.Insert(i, articulos[i].nombre + "-" + articulos[i].Marca);
             }
             cbArticulos.SelectedIndex = 0;
-        
+        }
+
+        private void llenar_cbo_proveedores()
+        {
+            cbProveedores.Items.Clear();
+            for (int i = 0; i < proveedores.Count; i++)
+            {
+                cbProveedores.Items.Insert(i, proveedores[i].nombre);
+            }
+            cbProveedores.SelectedIndex = 0;
         }
 
         private void llenar_informacion_articulo(int indice)
@@ -98,6 +116,21 @@ namespace Libreria
             llenar_informacion_articulo(cbArticulos.SelectedIndex);
         }
 
+        private void btAgregarProveedor_Click(object sender, EventArgs e)
+        {
+            Proveedor prov;
+            if (tbProveedorNombre.Text != "" && tbProveedorEmail.Text != "")
+            {
+                prov = new Proveedor(tbProveedorNombre.Text,tbProveedorEmail.Text,proveedores.Count + 1);
+                proveedores.Add(prov);
+                llenar_cbo_proveedores();
+            }
+        }
+
+        private void cbProveedores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
 
 
     }

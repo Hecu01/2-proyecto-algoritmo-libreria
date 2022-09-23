@@ -30,28 +30,31 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btArticulo = new System.Windows.Forms.Button();
+            this.tbArticuloCantidad = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbPrecio = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbMarca = new System.Windows.Forms.TextBox();
+            this.tbArtDescripcion = new System.Windows.Forms.TextBox();
+            this.tbArticulo = new System.Windows.Forms.TextBox();
+            this.cbArticulos = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.cbArticulos = new System.Windows.Forms.ComboBox();
-            this.tbArticulo = new System.Windows.Forms.TextBox();
-            this.tbArtDescripcion = new System.Windows.Forms.TextBox();
-            this.tbMarca = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbPrecio = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbArticuloCantidad = new System.Windows.Forms.TextBox();
             this.cbUsuario = new System.Windows.Forms.ComboBox();
-            this.btArticulo = new System.Windows.Forms.Button();
+            this.cbProveedores = new System.Windows.Forms.ComboBox();
+            this.tbProveedorNombre = new System.Windows.Forms.TextBox();
+            this.tbProveedorEmail = new System.Windows.Forms.TextBox();
+            this.btAgregarProveedor = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -90,135 +93,22 @@
             this.tabPage1.Text = "ABM Articulos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // btArticulo
             // 
-            this.tabPage2.Controls.Add(this.checkBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(607, 314);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "AMB Clientes";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.btArticulo.Location = new System.Drawing.Point(210, 74);
+            this.btArticulo.Name = "btArticulo";
+            this.btArticulo.Size = new System.Drawing.Size(163, 84);
+            this.btArticulo.TabIndex = 11;
+            this.btArticulo.Text = "Agregar Articulos";
+            this.btArticulo.UseVisualStyleBackColor = true;
+            this.btArticulo.Click += new System.EventHandler(this.btArticulo_Click);
             // 
-            // checkBox2
+            // tbArticuloCantidad
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(85, 21);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 0;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(607, 314);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "ABM Proveedores";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(607, 314);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Stock";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(607, 314);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Compra a Proveedores";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(607, 314);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Venta a Clientes";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // cbArticulos
-            // 
-            this.cbArticulos.FormattingEnabled = true;
-            this.cbArticulos.Location = new System.Drawing.Point(210, 24);
-            this.cbArticulos.Name = "cbArticulos";
-            this.cbArticulos.Size = new System.Drawing.Size(121, 21);
-            this.cbArticulos.TabIndex = 0;
-            this.cbArticulos.SelectedIndexChanged += new System.EventHandler(this.cbArticulos_SelectedIndexChanged);
-            // 
-            // tbArticulo
-            // 
-            this.tbArticulo.Location = new System.Drawing.Point(82, 59);
-            this.tbArticulo.Name = "tbArticulo";
-            this.tbArticulo.Size = new System.Drawing.Size(100, 20);
-            this.tbArticulo.TabIndex = 1;
-            // 
-            // tbArtDescripcion
-            // 
-            this.tbArtDescripcion.Location = new System.Drawing.Point(82, 86);
-            this.tbArtDescripcion.Name = "tbArtDescripcion";
-            this.tbArtDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.tbArtDescripcion.TabIndex = 2;
-            // 
-            // tbMarca
-            // 
-            this.tbMarca.Location = new System.Drawing.Point(82, 113);
-            this.tbMarca.Name = "tbMarca";
-            this.tbMarca.Size = new System.Drawing.Size(100, 20);
-            this.tbMarca.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Articulo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Descripcion";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 119);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Marca";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Precio Unitario";
-            // 
-            // tbPrecio
-            // 
-            this.tbPrecio.Location = new System.Drawing.Point(82, 142);
-            this.tbPrecio.Name = "tbPrecio";
-            this.tbPrecio.Size = new System.Drawing.Size(100, 20);
-            this.tbPrecio.TabIndex = 8;
+            this.tbArticuloCantidad.Location = new System.Drawing.Point(82, 173);
+            this.tbArticuloCantidad.Name = "tbArticuloCantidad";
+            this.tbArticuloCantidad.Size = new System.Drawing.Size(100, 20);
+            this.tbArticuloCantidad.TabIndex = 10;
             // 
             // label5
             // 
@@ -229,12 +119,128 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Cantidad";
             // 
-            // tbArticuloCantidad
+            // tbPrecio
             // 
-            this.tbArticuloCantidad.Location = new System.Drawing.Point(82, 173);
-            this.tbArticuloCantidad.Name = "tbArticuloCantidad";
-            this.tbArticuloCantidad.Size = new System.Drawing.Size(100, 20);
-            this.tbArticuloCantidad.TabIndex = 10;
+            this.tbPrecio.Location = new System.Drawing.Point(82, 142);
+            this.tbPrecio.Name = "tbPrecio";
+            this.tbPrecio.Size = new System.Drawing.Size(100, 20);
+            this.tbPrecio.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Precio Unitario";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 119);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Marca";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Descripcion";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Articulo";
+            // 
+            // tbMarca
+            // 
+            this.tbMarca.Location = new System.Drawing.Point(82, 113);
+            this.tbMarca.Name = "tbMarca";
+            this.tbMarca.Size = new System.Drawing.Size(100, 20);
+            this.tbMarca.TabIndex = 3;
+            // 
+            // tbArtDescripcion
+            // 
+            this.tbArtDescripcion.Location = new System.Drawing.Point(82, 86);
+            this.tbArtDescripcion.Name = "tbArtDescripcion";
+            this.tbArtDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.tbArtDescripcion.TabIndex = 2;
+            // 
+            // tbArticulo
+            // 
+            this.tbArticulo.Location = new System.Drawing.Point(82, 59);
+            this.tbArticulo.Name = "tbArticulo";
+            this.tbArticulo.Size = new System.Drawing.Size(100, 20);
+            this.tbArticulo.TabIndex = 1;
+            // 
+            // cbArticulos
+            // 
+            this.cbArticulos.FormattingEnabled = true;
+            this.cbArticulos.Location = new System.Drawing.Point(210, 24);
+            this.cbArticulos.Name = "cbArticulos";
+            this.cbArticulos.Size = new System.Drawing.Size(121, 21);
+            this.cbArticulos.TabIndex = 0;
+            this.cbArticulos.SelectedIndexChanged += new System.EventHandler(this.cbArticulos_SelectedIndexChanged);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(607, 265);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "AMB Clientes";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.btAgregarProveedor);
+            this.tabPage3.Controls.Add(this.tbProveedorEmail);
+            this.tabPage3.Controls.Add(this.tbProveedorNombre);
+            this.tabPage3.Controls.Add(this.cbProveedores);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(607, 265);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "ABM Proveedores";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(607, 265);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Stock";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(607, 265);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Compra a Proveedores";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(607, 265);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Venta a Clientes";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // cbUsuario
             // 
@@ -244,15 +250,38 @@
             this.cbUsuario.Size = new System.Drawing.Size(121, 21);
             this.cbUsuario.TabIndex = 1;
             // 
-            // btArticulo
+            // cbProveedores
             // 
-            this.btArticulo.Location = new System.Drawing.Point(210, 74);
-            this.btArticulo.Name = "btArticulo";
-            this.btArticulo.Size = new System.Drawing.Size(163, 84);
-            this.btArticulo.TabIndex = 11;
-            this.btArticulo.Text = "Agregar Articulos";
-            this.btArticulo.UseVisualStyleBackColor = true;
-            this.btArticulo.Click += new System.EventHandler(this.btArticulo_Click);
+            this.cbProveedores.FormattingEnabled = true;
+            this.cbProveedores.Location = new System.Drawing.Point(212, 24);
+            this.cbProveedores.Name = "cbProveedores";
+            this.cbProveedores.Size = new System.Drawing.Size(121, 21);
+            this.cbProveedores.TabIndex = 0;
+            this.cbProveedores.SelectedIndexChanged += new System.EventHandler(this.cbProveedores_SelectedIndexChanged);
+            // 
+            // tbProveedorNombre
+            // 
+            this.tbProveedorNombre.Location = new System.Drawing.Point(74, 57);
+            this.tbProveedorNombre.Name = "tbProveedorNombre";
+            this.tbProveedorNombre.Size = new System.Drawing.Size(100, 20);
+            this.tbProveedorNombre.TabIndex = 1;
+            // 
+            // tbProveedorEmail
+            // 
+            this.tbProveedorEmail.Location = new System.Drawing.Point(74, 92);
+            this.tbProveedorEmail.Name = "tbProveedorEmail";
+            this.tbProveedorEmail.Size = new System.Drawing.Size(100, 20);
+            this.tbProveedorEmail.TabIndex = 2;
+            // 
+            // btAgregarProveedor
+            // 
+            this.btAgregarProveedor.Location = new System.Drawing.Point(212, 53);
+            this.btAgregarProveedor.Name = "btAgregarProveedor";
+            this.btAgregarProveedor.Size = new System.Drawing.Size(143, 71);
+            this.btAgregarProveedor.TabIndex = 3;
+            this.btAgregarProveedor.Text = "Agregar Proveedor";
+            this.btAgregarProveedor.UseVisualStyleBackColor = true;
+            this.btAgregarProveedor.Click += new System.EventHandler(this.btAgregarProveedor_Click);
             // 
             // Form1
             // 
@@ -266,8 +295,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -277,7 +306,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
@@ -295,6 +323,10 @@
         private System.Windows.Forms.ComboBox cbArticulos;
         private System.Windows.Forms.ComboBox cbUsuario;
         private System.Windows.Forms.Button btArticulo;
+        private System.Windows.Forms.TextBox tbProveedorEmail;
+        private System.Windows.Forms.TextBox tbProveedorNombre;
+        private System.Windows.Forms.ComboBox cbProveedores;
+        private System.Windows.Forms.Button btAgregarProveedor;
     }
 }
 
